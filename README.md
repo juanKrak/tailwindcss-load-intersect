@@ -1,4 +1,5 @@
 # Tailwind CSS Load & Intersection Plugin
+FORK OF [tailwindcss-intersect](https://github.com/heidkaemper/tailwindcss-intersect)
 
 Imagine you could write an Intersection Observer like a Tailwind CSS variant:
 ```html

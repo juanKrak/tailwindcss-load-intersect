@@ -1,13 +1,13 @@
 {
-    "name": "tailwindcss-intersect",
-    "description": "Tailwind CSS with Intersection Observer variants",
-    "author": "Lars Heidkämper",
+    "name": "tailwindcss-load-intersect",
+    "description": "Tailwind CSS with Intersection Observer & Load variants",
+    "author": "Juan Rolon & Lars Heidkämper",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/heidkaemper/tailwindcss-intersect.git"
+        "url": "git+https://github.com/juanKrak/tailwindcss-load-intersect.git"
     },
-    "homepage": "https://github.com/heidkaemper/tailwindcss-intersect",
+    "homepage": "https://github.com/juanKrak/tailwindcss-load-intersect",
     "keywords": [
         "tailwindcss",
         "tailwind",

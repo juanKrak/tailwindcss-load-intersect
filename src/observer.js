@@ -1,35 +1,36 @@
 const Observer = {
-    start() {
-        if (document.readyState !== 'complete') {
-            document.addEventListener('DOMContentLoaded', this.observe);
+        start() {
+          if (document.readyState !== "complete") {
+            document.addEventListener("DOMContentLoaded", this.observe);
 
             return;
-        }
+          }
 
-        this.observe();
-    },
+          this.observe();
+        },
 
-    observe() {
-        const elements = document.querySelectorAll('[class*=" intersect:"],[class*=":intersect:"],[class^="intersect:"],[class="intersect"],[class*=" intersect "],[class^="intersect "],[class$=" intersect"]');
+        observe() {
+          const elements = document.querySelectorAll(
+            '[class*=" intersect:"],[class*=":intersect:"],[class^="intersect:"],[class="intersect"],[class*=" intersect "],[class^="intersect "],[class$=" intersect"]',
+          );
 
-        elements.forEach(element => {
-            let observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (! entry.isIntersecting) {
-                        element.setAttribute('no-intersect', '');
+          elements.forEach((element) => {
+            let observer = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                  element.removeAttribute("intersecting");
+                  return;
+                }
 
-                        return;
-                    }
+                element.setAttribute("intersecting", "");
 
-                    element.removeAttribute('no-intersect');
-
-                    element.classList.contains('intersect-once') && observer.disconnect();
-                });
+                element.classList.contains("intersect-once") &&
+                  observer.disconnect();
+              });
             });
 
             observer.observe(element);
-        });
-    }
+          });
+        },
 };
-
 export default Observer;

@@ -12,7 +12,7 @@ Imagine you could write an Intersection Observer like a Tailwind CSS variant:
 This package has two parts. A Tailwind CSS plugin and a tiny JavaScript snippet.<br>
 Download and install it with NPM:
 ```sh
-npm install -D tailwindcss-intersect
+npm install tailwindcss-load-intersect
 ```
 
 ### Add the plugin to your tailwind.config.js file
@@ -31,7 +31,7 @@ module.exports = {
 #### Via NPM
 Alternatively, you can add the plugin to your JavaScript bundle:
 ```js
-import Observer from 'tailwindcss-intersect';
+import Observer from 'tailwindcss-load-intersect';
 
 Observer.start();
 ```
